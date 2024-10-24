@@ -1,83 +1,20 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApiModels;
+using WebApiInterface;
 
 namespace WebApiProyecto_P.Controllers
 {
-    public class ProductosController : Controller
+    [Route("Api/[Controllers]")]
+    [ApiController]
+    public class ProductosController : ControllerBase
     {
-        // GET: ProductosController
-        public ActionResult Index()
-        {
-            return View();
-        }
+        private readonly IProductoServices _ProductosServices;
 
-        // GET: ProductosController/Details/5
-        public ActionResult Details(int id)
+        public ProductosController(IProductoServices productosServices)
         {
-            return View();
-        }
-
-        // GET: ProductosController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: ProductosController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ProductosController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ProductosController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ProductosController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ProductosController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _ProductosServices = productosServices;
         }
     }
+    //Get: Api / Producto
 }

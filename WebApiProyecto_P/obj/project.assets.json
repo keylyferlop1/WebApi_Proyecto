@@ -107,6 +107,43 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "WebApiInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "WebApiModels": "1.0.0",
+          "WebApiServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebApiInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiInterface.dll": {}
+        }
+      },
+      "WebApiModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/WebApiModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiModels.dll": {}
+        }
+      },
+      "WebApiServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "WebApiModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebApiServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiServices.dll": {}
+        }
       }
     }
   },
@@ -460,12 +497,29 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "WebApiInterface/1.0.0": {
+      "type": "project",
+      "path": "../WebApiInterface/WebApiInterface.csproj",
+      "msbuildProject": "../WebApiInterface/WebApiInterface.csproj"
+    },
+    "WebApiModels/1.0.0": {
+      "type": "project",
+      "path": "../WebApiModels/WebApiModels.csproj",
+      "msbuildProject": "../WebApiModels/WebApiModels.csproj"
+    },
+    "WebApiServices/1.0.0": {
+      "type": "project",
+      "path": "../WebApiServices/WebApiServices.csproj",
+      "msbuildProject": "../WebApiServices/WebApiServices.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.13",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "WebApiInterface >= 1.0.0",
+      "WebApiModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -500,7 +554,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\mercè\\Desktop\\WebApiProyecto_P\\WebApiProyecto_P\\WebApiInterface\\WebApiInterface.csproj": {
+              "projectPath": "C:\\Users\\mercè\\Desktop\\WebApiProyecto_P\\WebApiProyecto_P\\WebApiInterface\\WebApiInterface.csproj"
+            },
+            "C:\\Users\\mercè\\Desktop\\WebApiProyecto_P\\WebApiProyecto_P\\WebApiModels\\WebApiModels.csproj": {
+              "projectPath": "C:\\Users\\mercè\\Desktop\\WebApiProyecto_P\\WebApiProyecto_P\\WebApiModels\\WebApiModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiInterface\WebApiInterface.csproj" />
+    <ProjectReference Include="..\WebApiModels\WebApiModels.csproj" />
+  </ItemGroup>
+
 </Project>
