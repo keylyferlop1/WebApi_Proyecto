@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WebApiInterface
 {
-    internal interface IUsuario
+    public interface IUsuario
     {
+
     }
 }

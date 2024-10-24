@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiModels\WebApiModels.csproj" />
+    <ProjectReference Include="..\WebApiServices\WebApiServices.csproj" />
+  </ItemGroup>
+
 </Project>

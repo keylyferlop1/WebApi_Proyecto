@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApiServices
 {
-    internal class Categorias
+    internal class CategoriasServices
     {
 
     }
